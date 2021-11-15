@@ -1,0 +1,9 @@
+.app-breadcrumb {
+  background-color: #e5f4f9;
+  padding: 13px 0;
+}
+
+.app-breadcrumb * {
+  color: #000;
+  font-size: 18px;
+}

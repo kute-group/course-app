@@ -1,0 +1,61 @@
+@import '~antd/dist/antd.css';
+@import './normalize.css';
+:root {
+  --blue: #034d72;
+  --white: #ffffff;
+  --topbar-bg: #04689a;
+  --topbar-bg-dark: #314c79;
+  --main-color: #ff6609;
+}
+
+body {
+  font-size: 100%;
+  overflow-x: hidden;
+}
+
+.app-content {
+  overflow-x: hidden;
+}
+
+.wraper {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.app-message {
+  text-align: right;
+}
+
+/*tablet pro*/
+
+@media only screen and (max-width: 1080px) {
+  .wraper {
+    max-width: 100%;
+  }
+}
+
+/*tablet*/
+
+@media only screen and (max-width: 680px) {
+}
+
+/*mobile*/
+
+@media only screen and (max-width: 480px) {
+}

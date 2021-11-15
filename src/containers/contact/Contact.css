@@ -1,0 +1,134 @@
+.wraper-contact-bg {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 30px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.title-contact-page h1 {
+  font-size: 2em;
+  color: #ff5521;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  margin-top: 40px;
+}
+
+.title-contact-page h1::after {
+  content: '';
+  display: block;
+  height: 1px;
+  background-color: #ff5521;
+  width: 100%;
+}
+
+.map-contact-page img {
+  width: 100%;
+}
+
+.infor-contact-page ul {
+  padding: 0;
+  margin: 0;
+}
+
+.infor-contact-page ul li {
+  list-style: none;
+  clear: both;
+  padding: 10px 0;
+}
+
+.infor-contact-page .icon-contact-page {
+  width: 8%;
+  float: left;
+}
+
+.infor-contact-page .content-icon-contact-page {
+  width: 92%;
+  float: left;
+}
+
+.infor-contact-page .anticon svg {
+  display: inline-block;
+  font-size: 2em;
+  margin-top: 15px;
+  color: #ff5621;
+}
+
+.infor-contact-page h4 {
+  font-size: 1.4em;
+  margin-bottom: 0;
+}
+
+.infor-contact-page ul > li + li {
+  border-top: 1px solid #ff5621;
+}
+
+.wraper-contact-bg .app-form .ant-btn {
+  width: auto;
+  margin-right: 15px;
+  font-size: 1.5em;
+  text-transform: none;
+}
+
+.wraper-contact-bg .app-form .button-canced {
+  background: #034d72;
+  border: 1px solid #023a55;
+  border-bottom: 4px solid #023a55;
+}
+
+.wraper-contact-bg .contact-form {
+  margin-top: 40px;
+}
+
+/*tablet pro*/
+
+@media only screen and (max-width: 1080px) {
+  .user-contact-page {
+    padding: 0 15px;
+  }
+
+  .wraper-contact-bg {
+    margin-top: 30px;
+  }
+
+  .title-contact-page h1 {
+    margin-top: 0px;
+  }
+
+  .infor-contact-page h4 {
+    line-height: 1.2;
+  }
+}
+
+/*tablet*/
+
+@media only screen and (max-width: 680px) {
+  .infor-contact-page .icon-contact-page {
+    width: 10%;
+  }
+
+  .infor-contact-page .content-icon-contact-page {
+    width: 90%;
+  }
+
+  .title-contact-page h1 {
+    line-height: 1.2;
+  }
+
+  .top-contact-page {
+    margin-bottom: 15px;
+  }
+}
+
+/*mobile*/
+
+@media only screen and (max-width: 480px) {
+  .infor-contact-page .icon-contact-page {
+    width: 15%;
+  }
+
+  .infor-contact-page .content-icon-contact-page {
+    width: 85%;
+  }
+}

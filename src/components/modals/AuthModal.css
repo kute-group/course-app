@@ -1,0 +1,219 @@
+.auth-modal {
+}
+
+.ant-modal-content {
+  border-radius: 15px;
+}
+
+.ant-modal-close {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 10;
+  padding: 0;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  background: #1b3043;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  transition: color 0.3s;
+  border-radius: 100%;
+}
+
+.ant-modal-close-x {
+  display: block;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 30px;
+  text-align: center;
+  text-transform: none;
+  text-rendering: auto;
+}
+
+.ant-modal-close:hover {
+  color: #fff;
+}
+
+.ant-modal-body {
+  padding: 40px 0 0 0;
+}
+
+.app-form .ant-form-item {
+  padding: 0 30px;
+}
+
+.app-form
+  .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+  border-color: #d9d9d9;
+}
+
+.app-form .ant-input-affix-wrapper-focused {
+  border-color: #d9d9d9;
+  box-shadow: none;
+}
+
+.app-form .ant-input-affix-wrapper {
+  padding: 15px 10px;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 16px;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+}
+
+.app-form .ant-input {
+  background-color: #f0f0f0;
+}
+
+.app-form .ant-form-item-has-error .ant-input:hover {
+  background-color: #f0f0f0;
+}
+
+.app-form .ant-modal-content {
+  background-color: #f0f0f0;
+}
+
+.ant-form-item-has-error .ant-input,
+.ant-form-item-has-error .ant-input-affix-wrapper,
+.ant-form-item-has-error .ant-input:hover,
+.ant-form-item-has-error .ant-input-affix-wrapper:hover {
+  background-color: #f0f0f0;
+}
+
+.app-form .ant-checkbox-wrapper {
+  padding-left: 15px;
+}
+
+.app-form .ant-btn-primary {
+  background: #ff5620;
+  color: #fff;
+  border: 1px solid #db4633;
+  border-radius: 10px;
+  border-bottom: 4px solid #bf4018;
+  width: 100%;
+  height: 50px;
+  font-size: 1.8em;
+  text-transform: uppercase;
+}
+
+/* .app-form .ant-btn {
+  height: 50px;
+  font-size: 1.8em;
+  text-transform: uppercase;
+} */
+
+.app-form .footer-login {
+  background-color: #1b3043;
+  padding: 15px;
+  border-radius: 0 0 15px 15px;
+}
+
+.app-form .forgot-password {
+  color: #fff;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+.app-form .forgot-password .ant-btn-link,
+.app-form .forgot-password a {
+  color: #ff5620;
+  padding: 0;
+  text-transform: none;
+  font-size: 1.2em;
+}
+
+.app-form .ant-checkbox-input {
+  color: red;
+}
+
+.app-form .ant-checkbox-wrapper span {
+  color: #787878;
+}
+
+.app-form .ant-checkbox-wrapper a {
+  color: #ff5620;
+  text-decoration: underline;
+}
+
+.app-form .rules-form-content {
+  padding-left: 15px;
+  color: #ff5620;
+}
+
+.app-form .rules-form-content .rules-form-content-1 {
+  margin-bottom: 0;
+}
+
+.app-form .form-title {
+  padding: 0 30px;
+  font-size: 2em;
+  text-transform: uppercase;
+  line-height: 1;
+  color: #ff5620;
+  text-align: center;
+}
+
+.social-login .ant-col {
+  padding: 0 10px;
+}
+
+.facebook-btn {
+  background: #04689a;
+  color: #fff;
+}
+
+.google-btn {
+  background: #c94130;
+  color: #fff;
+}
+.form-sucsess span.anticon.anticon-check-circle svg {
+  font-size: 80px;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 15px;
+  fill: green;
+}
+
+.form-sucsess {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.form-sucsess h3 {
+  font-size: 21px;
+}
+
+.form-sucsess p {
+  font-size: 16px;
+  padding: 20px;
+}
+.form-sucsess span.anticon.anticon-check-circle {
+  width: 100%;
+}
+.form-sucsess span.anticon.anticon-close-circle svg {
+  font-size: 80px;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 15px;
+  fill: red;
+}
+.info-user a {
+  text-align: left;
+}
+
+.info-user i {
+  margin-right: 10px;
+}
+
+a {
+}
+
+.info-user i.fa.fa-leanpub {
+  font-size: 13px;
+}

@@ -1,0 +1,122 @@
+.register {
+}
+
+.register .title-register {
+  font-size: 2.3em;
+  text-align: center;
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+.register .title-register span {
+  font-weight: bolder;
+}
+
+.wraper-register {
+  background-color: #fff;
+  border: 1px solid#ccc;
+  border-radius: 20px;
+  padding: 40px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+/* css tab */
+.register .ant-tabs-nav-list {
+  width: 100%;
+}
+
+.register .ant-tabs-tab {
+  width: 50%;
+}
+
+.register .ant-tabs-tab-btn {
+  margin: auto;
+}
+
+.register .ant-tabs-ink-bar {
+  background: #ff5620;
+}
+
+.register .ant-form-horizontal .ant-form-item-label {
+  display: none;
+}
+
+.register .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+}
+
+.register .ant-tabs-tab + .ant-tabs-tab {
+  margin: 0;
+}
+
+.register .ant-tabs-tab-btn {
+  margin: auto;
+  font-size: 1.5em;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #1b3043;
+}
+
+.register .ant-tabs {
+  color: #828282;
+}
+
+.register .ant-tabs-tab:hover {
+  color: #828282 !important;
+}
+
+.register .ant-tabs-top > .ant-tabs-nav::before {
+  border-bottom: 2px solid #d1d1d1;
+}
+
+.register .ant-tabs-top > .ant-tabs-nav {
+  margin: 0 0 35px 0;
+}
+/* end css tab */
+
+.register .app-form .ant-form-item {
+  padding: 0;
+}
+
+.register
+  .ant-select-single:not(.ant-select-customize-input)
+  .ant-select-selector {
+  height: 60px;
+  padding: 15px 10px;
+}
+
+.register .app-form .ant-btn-primary {
+  width: auto;
+  margin-top: 30px;
+  float: right;
+}
+
+/*tablet pro*/
+
+@media only screen and (max-width: 1080px) {
+  .register {
+    padding: 0 15px;
+  }
+}
+
+/*tablet*/
+
+@media only screen and (max-width: 680px) {
+  .register .app-form .ant-btn-primary {
+    float: none;
+    margin: auto;
+    display: block;
+    margin-top: 30px;
+  }
+}
+
+/*mobile*/
+
+@media only screen and (max-width: 480px) {
+}

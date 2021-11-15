@@ -1,0 +1,31 @@
+.big-slider {
+  max-height: 82vh;
+  overflow: hidden;
+}
+
+.big-slider .slide img {
+  width: 100%;
+  height: auto;
+}
+
+.big-slider .ant-carousel-vertical .slick-dots {
+  top: 40%;
+  z-index: 4;
+}
+
+.ant-carousel-vertical .slick-dots li {
+  background: var(--white);
+}
+
+.ant-carousel-vertical .slick-dots li,
+.ant-carousel-vertical .slick-dots li.active {
+  width: 6px !important;
+  height: 40px !important;
+  margin-bottom: 5px !important;
+  background: var(--main-color);
+}
+
+.big-slider .ant-carousel-vertical .slick-dots li button {
+  width: 6px;
+  height: 40px;
+}

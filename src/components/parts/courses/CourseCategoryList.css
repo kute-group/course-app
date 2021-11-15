@@ -1,0 +1,233 @@
+.category-course-list {
+}
+
+.category-course-list .course-row {
+  margin-bottom: 35px;
+}
+
+.category-course-list .category-courses-title {
+  text-align: center;
+  color: var(--blue);
+  font-size: 2.5em;
+  font-weight: bolder;
+}
+
+.category-course-list .course-cate-left {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.category-course-list .course-cate-left .cate-course-box {
+  padding: 30px;
+}
+
+.category-course-list
+  .course-cate-left
+  .cate-course-box
+  .course-text
+  .course-title
+  a {
+  color: #000;
+  font-size: 1.5em;
+  line-height: 1.2;
+}
+
+.category-course-list
+  .course-row:nth-child(2n + 1)
+  .course-cate-left
+  .cate-course-box
+  .course-text
+  .course-title
+  a {
+  color: #fff;
+}
+
+.category-course-list
+  .course-cate-left
+  .cate-course-box
+  .course-text
+  .course-description {
+  font-size: 1.2em;
+}
+
+.category-course-list
+  .course-row:nth-child(2n + 1)
+  .course-cate-left
+  .cate-course-box
+  .course-text
+  .course-description {
+  color: #fff;
+}
+
+.category-course-list .course-cate-left .cate-course-box .course-text .prices {
+  text-align: right;
+}
+
+.category-course-list
+  .course-cate-left
+  .cate-course-box
+  .course-text
+  .prices
+  .price {
+  font-size: 1.4em;
+  font-weight: normal;
+}
+
+.category-course-list
+  .course-cate-left
+  .cate-course-box
+  .course-text
+  .prices
+  .price
+  span {
+  text-decoration: line-through;
+}
+
+.category-course-list
+  .course-row:nth-child(2n + 1)
+  .course-cate-left
+  .cate-course-box
+  .course-text
+  .prices
+  .price {
+  color: #fff;
+}
+
+.category-course-list
+  .course-cate-left
+  .cate-course-box
+  .course-text
+  .prices
+  .sale-price {
+  font-size: 1.2em;
+}
+
+.category-course-list
+  .course-cate-left
+  .cate-course-box
+  .course-text
+  .prices
+  .sale-price
+  span {
+  font-size: 1.3em;
+  font-weight: bolder;
+}
+
+.category-course-list
+  .course-row:nth-child(2n + 1)
+  .course-cate-left
+  .cate-course-box
+  .course-text
+  .prices
+  .sale-price {
+  color: #fff;
+}
+
+.category-course-list
+  .course-cate-left
+  .cate-course-box
+  .course-text
+  .btn-view-more {
+  background: #8ac449;
+  color: #fff;
+  border: 1px solid #8ac449;
+  border-radius: 10px;
+  border-bottom: 4px solid #679336;
+  position: absolute;
+  bottom: -15px;
+  right: 135px;
+}
+
+.category-course-list .course-description {
+  height: 95px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.category-course-list .course-title {
+  height: 70px;
+  overflow: hidden;
+}
+
+.category-course-list
+  .course-cate-left
+  .cate-course-box
+  .course-text
+  .btn-view-more:hover {
+  background: #579336;
+}
+
+.category-course-list
+  .course-cate-left
+  .cate-course-box
+  .course-text
+  .btn-register {
+  background: #db4633;
+  color: #fff;
+  border: 1px solid #db4633;
+  border-radius: 10px;
+  border-bottom: 4px solid #ad3829;
+  position: absolute;
+  bottom: -15px;
+  right: 15px;
+}
+
+.category-course-list
+  .course-cate-left
+  .cate-course-box
+  .course-text
+  .btn-register:hover {
+  background: #ad3829;
+}
+
+.category-course-list .course-cate-right {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.category-course-list .course-cate-right img {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.category-course-list .course-cate-right img:hover {
+  opacity: 0.8;
+}
+
+@media only screen and (max-width: 1080px) {
+  .wraper-category-courses {
+    padding: 0 15px;
+  }
+
+  .category-course-list .course-cate-right {
+    display: none;
+  }
+
+  .category-course-list .course-cate-left {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+  }
+}
+
+/*tablet*/
+
+@media only screen and (max-width: 680px) {
+}
+
+/*mobile*/
+
+@media only screen and (max-width: 480px) {
+}

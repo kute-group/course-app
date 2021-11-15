@@ -1,0 +1,92 @@
+.list-teacher-single {
+}
+
+.wraper-teacher-single-bg {
+  background-color: #fff;
+  border: 1px solid#ccc;
+  border-radius: 20px;
+  padding: 40px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.list-teacher-single .teacher-title {
+  margin: 0 0px 10px 0;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.content-teacher-single img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.list-teacher-single .teacher-right-title-single {
+  color: #ff5620;
+  margin: 0 0px 30px 0;
+  line-height: 1.2;
+}
+
+.content-list-teacher-single ul {
+  margin: 0;
+  padding: 0;
+}
+
+.content-list-teacher-single ul li {
+  list-style: none;
+  padding: 15px 0;
+}
+
+.content-list-teacher-single ul li + li {
+  border-top: 1px solid #ccc;
+}
+
+.content-list-teacher-single ul li img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.list-teacher-single .content-list-teacher-single {
+  margin-bottom: 30px;
+}
+
+.list-teacher-single .full-name-teacher h3 {
+  font-size: 1.4em;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+.list-teacher-single .full-name-teacher h3 a {
+  color: #000;
+}
+
+.list-teacher-single .full-name-teacher h3 a:hover {
+  color: #ff5620;
+}
+
+.list-teacher-single .banner-bottom img {
+  width: 100%;
+}
+
+/*tablet pro*/
+
+@media only screen and (max-width: 1080px) {
+  .list-teacher-single {
+    padding: 0 15px;
+  }
+  .list-teacher-single .teacher-right-title-single {
+    margin: 30px 0 0 0;
+  }
+}
+
+/*tablet*/
+
+@media only screen and (max-width: 680px) {
+}
+
+/*mobile*/
+
+@media only screen and (max-width: 480px) {
+}

@@ -1,0 +1,121 @@
+.class-list {
+  background-color: #fff;
+  margin-top: -90px;
+  position: relative;
+}
+
+.class-list::before {
+  background-image: url('assets/images/bg_cloud.png');
+  position: absolute;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+  content: '';
+  left: 0;
+  right: 0;
+  height: 250px;
+  display: block;
+  top: -180px;
+}
+
+.class-list .class-box {
+  text-align: center;
+  border: 1px solid #ddd;
+  margin: 45px 0;
+  border-radius: 10px;
+}
+
+.class-list .class-box .color-box {
+  background: #ffba00;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: var(--white);
+  padding: 20px 0 30px 0;
+}
+
+.class-list .class-row:nth-child(2) .color-box {
+  background: #0fc45b;
+}
+
+.class-list .class-row:nth-child(3) .color-box {
+  background: #1dc2da;
+}
+
+.class-list .class-row:nth-child(4) .color-box {
+  background: #ff8897;
+}
+
+.class-list .class-row:nth-child(5) .color-box {
+  background: #3079d5;
+}
+
+.class-list .class-row:nth-child(6) .color-box {
+  background: #dc4baa;
+}
+
+.class-list .class-box .color-box .class-text {
+  font-size: 3em;
+  color: var(--white);
+  margin: 0;
+}
+
+.class-list .class-box .color-box .class-number {
+  font-size: 6em;
+  color: var(--white);
+  margin: 0;
+  line-height: 100%;
+}
+
+.class-list .class-box .class-links .class-link {
+  display: block;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  padding: 10px 15px;
+  color: #000;
+  font-weight: bold;
+}
+
+.class-list .class-box .class-links .class-link:last-child {
+  border-bottom: 0;
+}
+
+/*tablet pro*/
+
+@media only screen and (max-width: 1080px) {
+  .class-list {
+    margin-top: -30px;
+    padding: 0 15px;
+  }
+  .class-list::before {
+    height: 205px;
+  }
+  .class-list .class-box {
+    margin: 15px 0;
+  }
+  .class-list .class-box .color-box {
+    padding: 5px 0 15px 0;
+  }
+  .class-list .class-box .color-box .class-text {
+    font-size: 2.5em;
+  }
+  .class-list .class-box .color-box .class-number {
+    font-size: 5em;
+  }
+}
+
+/*tablet*/
+
+@media only screen and (max-width: 680px) {
+  .class-list .class-box .color-box .class-text {
+    font-size: 1.5em;
+  }
+  .class-list .class-box .color-box .class-number {
+    font-size: 3em;
+  }
+}
+
+/*mobile*/
+
+@media only screen and (max-width: 480px) {
+}
