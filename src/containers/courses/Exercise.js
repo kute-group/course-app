@@ -192,7 +192,7 @@ function Excercise() {
                               </div>
                               <div className="comment-name">012345678</div>
                               <div className="comment-content">
-                                Bài giảng rất hay
+                                Mình thấy bài giảng rất hay
                               </div>
                               <div className="comment-rating">
                                 <Rate allowHalf defaultValue={2} />
@@ -212,7 +212,7 @@ function Excercise() {
                               </div>
                               <div className="comment-name">012345678</div>
                               <div className="comment-content">
-                                Bài giảng rất hay
+                                Mình thấy bài giảng rất hay
                               </div>
                               <div className="comment-rating">
                                 <Rate allowHalf defaultValue={5} />
@@ -232,7 +232,7 @@ function Excercise() {
                               </div>
                               <div className="comment-name">012345678</div>
                               <div className="comment-content">
-                                Bài giảng rất hay
+                                Mình thấy bài giảng rất hay
                               </div>
                               <div className="comment-rating">
                                 <Rate allowHalf defaultValue={4} />
@@ -252,7 +252,7 @@ function Excercise() {
                               </div>
                               <div className="comment-name">012345678</div>
                               <div className="comment-content">
-                                Bài giảng rất hay
+                                Mình thấy bài giảng rất hay
                               </div>
                               <div className="comment-rating">
                                 <Rate allowHalf defaultValue={1} />
@@ -272,7 +272,7 @@ function Excercise() {
                               </div>
                               <div className="comment-name">012345678</div>
                               <div className="comment-content">
-                                Bài giảng rất hay
+                                Mình thấy bài giảng rất hay
                               </div>
                               <div className="comment-rating">
                                 <Rate allowHalf defaultValue={2.5} />
@@ -292,7 +292,7 @@ function Excercise() {
                               </div>
                               <div className="comment-name">012345678</div>
                               <div className="comment-content">
-                                Bài giảng rất hay
+                                Mình thấy bài giảng rất hay
                               </div>
                               <div className="comment-rating">
                                 <Rate allowHalf defaultValue={2} />
