@@ -26,9 +26,9 @@ function TopBar(props) {
   const parsed = queryString.parse(location.search);
   const renderLevels = () => {
     const levels = [
-      { title: 'Tiểu học', path: '/tieu-hoc' },
-      { title: 'THCS', path: '/thcs' },
-      { title: 'THPT', path: '/thpt' },
+      { title: 'Hot', path: '/hot' },
+      { title: 'Nổi bật', path: '/noi-bat' },
+      { title: 'Vip', path: '/vip' },
     ];
     const levelLinks = levels.map((level, idx) => {
       const path =

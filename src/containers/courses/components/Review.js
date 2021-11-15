@@ -44,7 +44,7 @@ function Review() {
                   <div className="comment-meta">
                     <div className="comment-date">03/04/2021 10:23</div>
                     <div className="comment-name">012345678</div>
-                    <div className="comment-content">em la do duc anh</div>
+                    <div className="comment-content">Bài giảng rất hay</div>
                   </div>
                   <div className="comment-rating">
                     <Rate allowHalf defaultValue={2.5} />
@@ -57,7 +57,7 @@ function Review() {
                   <div className="comment-meta">
                     <div className="comment-date">03/04/2021 00:00</div>
                     <div className="comment-name">012345678</div>
-                    <div className="comment-content">em la do duc anh</div>
+                    <div className="comment-content">Bài giảng rất hay</div>
                     <div className="comment-rating">
                       <Rate allowHalf defaultValue={2.5} />
                     </div>
@@ -70,7 +70,7 @@ function Review() {
                   <div className="comment-meta">
                     <div className="comment-date">03/04/2021 10:23</div>
                     <div className="comment-name">012345678</div>
-                    <div className="comment-content">em la do duc anh</div>
+                    <div className="comment-content">Bài giảng rất hay</div>
                     <div className="comment-rating">
                       <Rate allowHalf defaultValue={2.5} />
                     </div>
@@ -83,7 +83,7 @@ function Review() {
                   <div className="comment-meta">
                     <div className="comment-date">03/04/2021 10:23</div>
                     <div className="comment-name">012345678</div>
-                    <div className="comment-content">em la do duc anh</div>
+                    <div className="comment-content">Bài giảng rất hay</div>
                     <div className="comment-rating">
                       <Rate allowHalf defaultValue={2.5} />
                     </div>
@@ -96,7 +96,7 @@ function Review() {
                   <div className="comment-meta">
                     <div className="comment-date">03/04/2021 10:23</div>
                     <div className="comment-name">012345678</div>
-                    <div className="comment-content">em la do duc anh</div>
+                    <div className="comment-content">Bài giảng rất hay</div>
                     <div className="comment-rating">
                       <Rate allowHalf defaultValue={2.5} />
                     </div>
@@ -109,7 +109,7 @@ function Review() {
                   <div className="comment-meta">
                     <div className="comment-date">03/04/2021 10:23</div>
                     <div className="comment-name">012345678</div>
-                    <div className="comment-content">em la do duc anh</div>
+                    <div className="comment-content">Bài giảng rất hay</div>
                     <div className="comment-rating">
                       <Rate allowHalf defaultValue={2.5} />
                     </div>

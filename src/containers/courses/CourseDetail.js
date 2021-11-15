@@ -29,25 +29,24 @@ function CourseDetail() {
   const dispatch = useDispatch();
   const course = useSelector((state) => state.course);
   const error = get(course, 'item.error', undefined);
-  const contentCourse = get(course, 'item.result.data', {});
+  const contentCourse = get(course, 'item.result.data.course', {});
+
+  console.log(222, contentCourse);
+  console.log(111, course);
   const renderPrice = (course) => {
-    if (course.sale_price && course.price) {
+    if (course.price_sale && course.price_origin) {
       return (
         <div className="prices">
           <div className="price">
-            <span>{formatedPrice(course.price)}</span> <sup>vnđ</sup>
+            <span>{formatedPrice(course.price_origin)}</span> <sup>vnđ</sup>
           </div>
           <div className="sale-price">
-            chỉ còn <span>{formatedPrice(course.sale_price)}</span>
+            chỉ còn <span>{formatedPrice(course.price_sale)}</span>
             <sup>vnđ</sup>
-          </div>
-          <div className="time-left">
-            <i className="fa fa-clock-o" aria-hidden="true"></i>
-            <p> chỉ còn nốt 2 ngày</p>
           </div>
         </div>
       );
-    } else if (!course.sale_price && course.price) {
+    } else if (!course.price_sale && course.price_origin) {
       return (
         <div className="prices">
           <div className="price">
@@ -77,6 +76,10 @@ function CourseDetail() {
             <div className="course-info" id="info">
               <h3>Thông tin khóa học</h3>
               <div className="course-content">
+                <iframe
+                  src={contentCourse.url_video}
+                  className="course-video"
+                ></iframe>
                 <ShowMoreText
                   lines={3}
                   more="Xem thêm"
@@ -102,38 +105,39 @@ function CourseDetail() {
             <div className="course-info">
               <figure>
                 <img
-                  src={`${contentCourse.image}`}
-                  alt={contentCourse.title}
+                  src={`${contentCourse.url_thumnail}`}
+                  alt={contentCourse.course_name}
                   width={'100%'}
                 />
               </figure>
               {renderPrice(contentCourse)}
               <div className="course-buttons">
                 <Button className="btn-support">
-                  <h3>TƯ VẤN THÊM</h3>
+                  <h3>
+                    <a href="https://zalo.me/g/ktttlx872" target="_blank">
+                      TƯ VẤN THÊM
+                    </a>
+                  </h3>
                 </Button>
                 <Button className="btn-course-register">
-                  <h3>Đăng ký khóa học</h3>
+                  <h3>
+                    <a
+                      href={`https://unica.vn/order/step1?id=${params.id}&aff=284040&coupon=WEB5NGAY`}
+                      target="_blank"
+                    >
+                      Đăng ký khóa học
+                    </a>
+                  </h3>
                 </Button>
               </div>
               <div className="course-target">
                 <div className="target-one">
                   <h3>Mục tiêu khóa học </h3>
-                  <p className="target-content">
-                    {removeHtmlTag(contentCourse.description)}
-                  </p>
-                </div>
-                <div className="target-two">
-                  <h3>Thời gian học </h3>
-                  <p className="target-content">
-                    12 tháng kể từ ngày kích hoạt
-                  </p>
-                </div>
-                <div className="target-four">
-                  <h3>Hỗ trợ </h3>
-                  <p className="target-content">
-                    Luôn có thầy cô trợ giảng trợ giúp trong vòng 20 phút
-                  </p>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: contentCourse.benefit,
+                    }}
+                  ></div>
                 </div>
               </div>
             </div>

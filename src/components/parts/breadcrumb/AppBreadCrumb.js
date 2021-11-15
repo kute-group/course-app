@@ -18,7 +18,7 @@ function AppBreadCrumb() {
           <Breadcrumb.Item href="">
             <span>Khóa học</span>
           </Breadcrumb.Item>
-          <Breadcrumb.Item>Khóa học lớp 9</Breadcrumb.Item>
+          <Breadcrumb.Item></Breadcrumb.Item>
         </Breadcrumb>
       </div>
     </div>

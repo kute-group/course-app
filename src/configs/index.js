@@ -7,6 +7,7 @@ const SHOW_DATE_FORMAT = 'D MMMM YYYY, HH:mm';
 
 export const API_URL = ENV === 'dev' ? API_URL_DEV : API_URL_PROD;
 export const WP_API = 'https://havamath.vn';
+export const UNI_COURSE_API = 'https://unica.vn';
 export const APP_URL =
   process.env.NODE_ENV === 'development'
     ? 'http://localhost:3005'
@@ -20,6 +21,7 @@ const AUTH_SOCIAL = {
 const config = {
   ENV,
   API_URL: ENV === 'dev' ? API_URL_DEV : API_URL_PROD,
+  UNI_COURSE_API,
   WP_API,
   DATE_FORMAT,
   SHOW_DATE_FORMAT,

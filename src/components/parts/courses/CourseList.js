@@ -1,8 +1,10 @@
-import React from 'react';
-import { Layout, Menu, Breadcrumb, Row, Col, Button } from 'antd';
+import React, { useState, useEffect } from 'react';
+import { get } from 'lodash';
+import { useSelector, useDispatch } from 'react-redux';
+import { Layout, Menu, Pagination, Row, Col, Button } from 'antd';
 import 'components/parts/courses/CourseList.css';
 import { ArrowRightOutlined, ContactsFilled } from '@ant-design/icons';
-
+import { fetchCourses } from 'redux/courses/action';
 import courseA from 'assets/images/course.jpg';
 import courseB from 'assets/images/courseB.jpg';
 
@@ -11,226 +13,70 @@ const { Header, Content, Footer } = Layout;
 
 // import internal libs
 
-function CourseList() {
+function CourseList(props) {
+  const [page, setPage] = useState(1);
+  const dispatch = useDispatch();
+  const course = useSelector((state) => state.course);
+  const courses = get(course, 'list.result.data.data.course', []);
+
+  useEffect(() => {
+    dispatch(fetchCourses({ page: 1 }));
+  }, []);
+
+  const renderCourses = () => {
+    const items = courses.map((item, index) => {
+      return (
+        <Col xl={8} sm={8} xs={12} className="course-row" key={index}>
+          <div className="course-box">
+            <div className="image-box">
+              <Link to={`/course/${item.id}/${item.url_course}`}>
+                <img src={item.url_thumnail} alt="" />
+              </Link>
+            </div>
+            <section className="course-text">
+              <h3 className="course-title">
+                <Link to={`/course/${item.id}/${item.url_course}`}>
+                  {item.course_name}
+                </Link>
+              </h3>
+              <p className="course-teacher">
+                <ContactsFilled /> GV: {item.teacher_name}
+              </p>
+              <div
+                className="course-description"
+                dangerouslySetInnerHTML={{ __html: item.content }}
+              />
+              <Button className="btn-view-more">
+                <Link to={`/course/${item.id}/${item.url_course}`}>
+                  <ArrowRightOutlined /> Xem thêm
+                </Link>
+              </Button>
+            </section>
+          </div>
+        </Col>
+      );
+    });
+    return (
+      <Row gutter={[20, 30]}>
+        {items}
+        <Pagination
+          current={page}
+          total={1500}
+          pageSize={15}
+          showSizeChanger={false}
+          onChange={(page, pageSize) => {
+            setPage(page);
+            dispatch(fetchCourses({ page }));
+          }}
+        />
+      </Row>
+    );
+  };
   return (
     <div className="course-list">
       <div className="wraper">
-        <h2 className="courses-title">Khóa học tiểu học nổi bật</h2>
-        <Row gutter={[20, 30]}>
-          <Col xl={6} sm={6} xs={12} className="course-row">
-            <div className="course-box">
-              <div className="image-box">
-                <Link to="/course/khoa-hoc-toan-10">
-                  <img src={courseA} alt="" />
-                </Link>
-              </div>
-              <section className="course-text">
-                <h3 className="course-title">
-                  <Link to="/course/khoa-hoc-toan-10">Khóa học tốt toán 8</Link>
-                </h3>
-                <p className="course-teacher">
-                  <ContactsFilled /> GV: Cô Lê Thị Hoa
-                </p>
-                <p className="course-description">
-                  Với thời lượng 30 bài học trong 8 giờ, khóa học cung cấp đầy
-                  đủ kiến thức cho các em học sinh lớp 8 trong thời gian tới.
-                  Khóa học cung cấp đầy đủ kiến thức
-                </p>
-                <Button className="btn-view-more">
-                  <Link to="/course/khoa-hoc-toan-10">
-                    <ArrowRightOutlined /> Xem thêm
-                  </Link>
-                </Button>
-              </section>
-            </div>
-          </Col>
-
-          <Col xl={6} sm={6} xs={12} className="course-row">
-            <div className="course-box">
-              <div className="image-box">
-                <Link to="/course/khoa-hoc-toan-10">
-                  <img src={courseB} alt="" />
-                </Link>
-              </div>
-              <section className="course-text">
-                <h3 className="course-title">
-                  <Link to="/course/khoa-hoc-toan-10">Khóa học tốt toán 8</Link>
-                </h3>
-                <p className="course-teacher">
-                  <ContactsFilled /> GV: Cô Lê Thị Hoa
-                </p>
-                <p className="course-description">
-                  Với thời lượng 30 bài học trong 8 giờ, khóa học cung cấp đầy
-                  đủ kiến thức cho các em học sinh lớp 8 trong thời gian tới.
-                </p>
-                <Button className="btn-view-more">
-                  <Link to="/course/khoa-hoc-toan-10">
-                    <ArrowRightOutlined /> Xem thêm
-                  </Link>
-                </Button>
-              </section>
-            </div>
-          </Col>
-          <Col xl={6} sm={6} xs={12} className="course-row">
-            <div className="course-box">
-              <div className="image-box">
-                <Link to="/course/khoa-hoc-toan-10">
-                  <img src={courseA} alt="" />
-                </Link>
-              </div>
-              <section className="course-text">
-                <h3 className="course-title">
-                  <Link to="/course/khoa-hoc-toan-10">Khóa học tốt toán 8</Link>
-                </h3>
-                <p className="course-teacher">
-                  <ContactsFilled /> GV: Cô Lê Thị Hoa
-                </p>
-                <p className="course-description">
-                  Với thời lượng 30 bài học trong 8 giờ, khóa học cung cấp đầy
-                  đủ kiến thức cho các em học sinh lớp 8 trong thời gian tới.
-                </p>
-                <Button className="btn-view-more">
-                  <Link to="/course/khoa-hoc-toan-10">
-                    <ArrowRightOutlined /> Xem thêm
-                  </Link>
-                </Button>
-              </section>
-            </div>
-          </Col>
-
-          <Col xl={6} sm={6} xs={12} className="course-row">
-            <div className="course-box">
-              <div className="image-box">
-                <Link to="/course/khoa-hoc-toan-10">
-                  <img src={courseB} alt="" />
-                </Link>
-              </div>
-              <section className="course-text">
-                <h3 className="course-title">
-                  <Link to="/course/khoa-hoc-toan-10">Khóa học tốt toán 8</Link>
-                </h3>
-                <p className="course-teacher">
-                  <ContactsFilled /> GV: Cô Lê Thị Hoa
-                </p>
-                <p className="course-description">
-                  Với thời lượng 30 bài học trong 8 giờ, khóa học cung cấp đầy
-                  đủ kiến thức cho các em học sinh lớp 8 trong thời gian tới.
-                </p>
-                <Button className="btn-view-more">
-                  <Link to="/course/khoa-hoc-toan-10">
-                    <ArrowRightOutlined /> Xem thêm
-                  </Link>
-                </Button>
-              </section>
-            </div>
-          </Col>
-          <Col xl={6} sm={6} xs={12} className="course-row">
-            <div className="course-box">
-              <div className="image-box">
-                <Link to="/course/khoa-hoc-toan-10">
-                  <img src={courseA} alt="" />
-                </Link>
-              </div>
-              <section className="course-text">
-                <h3 className="course-title">
-                  <Link to="/course/khoa-hoc-toan-10">Khóa học tốt toán 8</Link>
-                </h3>
-                <p className="course-teacher">
-                  <ContactsFilled /> GV: Cô Lê Thị Hoa
-                </p>
-                <p className="course-description">
-                  Với thời lượng 30 bài học trong 8 giờ, khóa học cung cấp đầy
-                  đủ kiến thức cho các em học sinh lớp 8 trong thời gian tới.
-                </p>
-                <Button className="btn-view-more">
-                  <Link to="/course/khoa-hoc-toan-10">
-                    <ArrowRightOutlined /> Xem thêm
-                  </Link>
-                </Button>
-              </section>
-            </div>
-          </Col>
-
-          <Col xl={6} sm={6} xs={12} className="course-row">
-            <div className="course-box">
-              <div className="image-box">
-                <Link to="/course/khoa-hoc-toan-10">
-                  <img src={courseB} alt="" />
-                </Link>
-              </div>
-              <section className="course-text">
-                <h3 className="course-title">
-                  <Link to="/course/khoa-hoc-toan-10">Khóa học tốt toán 8</Link>
-                </h3>
-                <p className="course-teacher">
-                  <ContactsFilled /> GV: Cô Lê Thị Hoa
-                </p>
-                <p className="course-description">
-                  Với thời lượng 30 bài học trong 8 giờ, khóa học cung cấp đầy
-                  đủ kiến thức cho các em học sinh lớp 8 trong thời gian tới.
-                </p>
-                <Button className="btn-view-more">
-                  <Link to="/course/khoa-hoc-toan-10">
-                    <ArrowRightOutlined /> Xem thêm
-                  </Link>
-                </Button>
-              </section>
-            </div>
-          </Col>
-          <Col xl={6} sm={6} xs={12} className="course-row">
-            <div className="course-box">
-              <div className="image-box">
-                <Link to="/course/khoa-hoc-toan-10">
-                  <img src={courseA} alt="" />
-                </Link>
-              </div>
-              <section className="course-text">
-                <h3 className="course-title">
-                  <Link to="/course/khoa-hoc-toan-10">Khóa học tốt toán 8</Link>
-                </h3>
-                <p className="course-teacher">
-                  <ContactsFilled /> GV: Cô Lê Thị Hoa
-                </p>
-                <p className="course-description">
-                  Với thời lượng 30 bài học trong 8 giờ, khóa học cung cấp đầy
-                  đủ kiến thức cho các em học sinh lớp 8 trong thời gian tới.
-                </p>
-                <Button className="btn-view-more">
-                  <Link to="/course/khoa-hoc-toan-10">
-                    <ArrowRightOutlined /> Xem thêm
-                  </Link>
-                </Button>
-              </section>
-            </div>
-          </Col>
-
-          <Col xl={6} sm={6} xs={12} className="course-row">
-            <div className="course-box">
-              <div className="image-box">
-                <Link to="/course/khoa-hoc-toan-10">
-                  <img src={courseB} alt="" />
-                </Link>
-              </div>
-              <section className="course-text">
-                <h3 className="course-title">
-                  <Link to="/course/khoa-hoc-toan-10">Khóa học tốt toán 8</Link>
-                </h3>
-                <p className="course-teacher">
-                  <ContactsFilled /> GV: Cô Lê Thị Hoa
-                </p>
-                <p className="course-description">
-                  Với thời lượng 30 bài học trong 8 giờ, khóa học cung cấp đầy
-                  đủ kiến thức cho các em học sinh lớp 8 trong thời gian tới.
-                </p>
-                <Button className="btn-view-more">
-                  <Link to="/course/khoa-hoc-toan-10">
-                    <ArrowRightOutlined /> Xem thêm
-                  </Link>
-                </Button>
-              </section>
-            </div>
-          </Col>
-        </Row>
+        <h2 className="courses-title">Danh sách khóa học</h2>
+        {renderCourses()}
       </div>
     </div>
   );

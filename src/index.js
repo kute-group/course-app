@@ -73,7 +73,7 @@ ReactDOM.render(
           <Route path="/dashboard">
             <Home />
           </Route>
-          <Route path="/courses">
+          <Route path="/courses/:id/:type">
             <ListCourses />
           </Route>
           <Route path="/course/:id">

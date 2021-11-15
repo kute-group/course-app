@@ -22,7 +22,7 @@
 }
 
 .course-list .course-box .image-box {
-  height: 150px;
+  height: 180px;
   overflow: hidden;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -44,7 +44,10 @@
   border-bottom-right-radius: 10px;
   position: relative;
 }
-
+.course-list .course-box .course-text .course-title {
+  height: 60px;
+  overflow: hidden;
+}
 .course-list .course-box .course-text .course-title a {
   color: #494949;
 }
@@ -62,7 +65,7 @@
   color: #444;
   margin-bottom: 0;
   padding-bottom: 20px;
-  height: 105px;
+  height: 98px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;

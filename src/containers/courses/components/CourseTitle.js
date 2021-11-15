@@ -8,7 +8,7 @@ function CourseTitle(props) {
   const renderCoursesTitles = (course) => {
     return (
       <div className="wraper-left">
-        <h3>{course.title}</h3>
+        <h3>{course.course_name}</h3>
       </div>
     );
   };

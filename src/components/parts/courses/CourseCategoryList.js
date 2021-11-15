@@ -22,23 +22,23 @@ function CourseCategoryList(props) {
   const { courses } = props;
 
   const renderPricePrice = (course) => {
-    if (course.sale_price && course.price) {
+    if (course.price_sale && course.price_origin) {
       return (
         <div className="prices">
           <div className="price">
-            <span>{formatedPrice(course.price)}</span> <sup>vnđ</sup>
+            <span>{formatedPrice(course.price_origin)}</span> <sup>vnđ</sup>
           </div>
           <div className="sale-price">
-            chỉ còn <span>{formatedPrice(course.sale_price)}</span>{' '}
+            chỉ còn <span>{formatedPrice(course.price_sale)}</span>{' '}
             <sup>vnđ</sup>
           </div>
         </div>
       );
-    } else if (!course.sale_price && course.price) {
+    } else if (!course.price_sale && course.price_origin) {
       return (
         <div className="prices">
           <div className="price">
-            <span>{formatedPrice(course.price)}</span> <sup>vnđ</sup>
+            <span>{formatedPrice(course.price_origin)}</span> <sup>vnđ</sup>
           </div>
         </div>
       );
@@ -68,28 +68,30 @@ function CourseCategoryList(props) {
           <div className="cate-course-box">
             <section className="course-text">
               <h3 className="course-title">
-                <Link to={`/course/${course._id}`}>{course.title}</Link>
+                <Link to={`/course/${course.id}/${course.url_course}`}>
+                  {course.course_name}
+                </Link>
               </h3>
               <p className="course-description">
-                {removeHtmlTag(course.description)}
+                {removeHtmlTag(course.content)}
               </p>
               {renderPricePrice(course)}
               <Button className="btn-view-more">
-                <Link to={`/course/${course._id}`}>
+                <Link to={`/course/${course.id}/${course.url_course}`}>
                   <ArrowRightOutlined /> Xem thêm
                 </Link>
               </Button>
 
               <Button className="btn-register">
-                <Link to={`/book/${course._id}`}>
+                <a href={`https://unica.vn/order/step1?id=${course.id}&aff=284040&coupon=WEB5NGAY`} target='_blank'>
                   <ArrowRightOutlined /> Đăng ký
-                </Link>
+                </a>
               </Button>
             </section>
           </div>
         </Col>
         <Col xl={12} sm={0} xs={0} className="course-cate-right">
-          <img src={`${API_URL}/${course.image}`} alt={course.title} />
+          <img src={course.url_thumnail} alt={course.course_name} />
         </Col>
       </Row>
     ));
@@ -98,7 +100,7 @@ function CourseCategoryList(props) {
   return (
     <div className="category-course-list">
       <div className="wraper wraper-category-courses">
-        <h2 className="category-courses-title">Khóa học nổi bật lớp 9</h2>
+        <h2 className="category-courses-title">Danh sách khóa học</h2>
         {renderCourses()}
       </div>
     </div>

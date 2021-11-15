@@ -191,7 +191,7 @@
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   width: 100%;
-  height: 300px;
+  height: 327px;
   overflow: hidden;
 }
 
@@ -199,7 +199,7 @@
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .category-course-list .course-cate-right img:hover {

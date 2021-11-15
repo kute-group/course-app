@@ -26,7 +26,7 @@ const { Panel } = Collapse;
 function Curriculum(props) {
   const renderCurriculum = () => {
     const renderLessons = (chapter) => {
-      const listLessonItems = get(chapter, 'lessons', []);
+      const listLessonItems = get(props, 'course.lessons', []).filter(item => item.parent_id === chapter.id);
 
       const listLessons = listLessonItems.map((lesson, index) => {
         return (
@@ -37,9 +37,9 @@ function Curriculum(props) {
           >
             <div className="review-box-timeline">
               <div className="review-box-timeline-left">
-                <h3>{lesson.title}</h3>
+                <h3>{lesson.name}</h3>
               </div>
-              <div className="review-box-timeline-right">
+              {/* <div className="review-box-timeline-right">
                 <Link
                   className="playvideo"
                   to={`/${props.course._id}/lesson/${lesson._id}`}
@@ -52,18 +52,18 @@ function Curriculum(props) {
                 <Link className="share" to="/link">
                   <PaperClipOutlined />
                 </Link>
-              </div>
+              </div> */}
             </div>
           </Timeline.Item>
         );
       });
       return <Timeline>{listLessons}</Timeline>;
     };
-    const listCurriculums = get(props, 'course.chapters', []);
+    const listCurriculums = get(props, 'course.lessons', []).filter(item => Number(item.parent_id) === 0);
     const renderCurriculums = listCurriculums.map((chapter, idx) => {
       return (
         <Panel
-          header={<p className="text-panel">{chapter.title}</p>}
+          header={<p className="text-panel">{chapter.name}</p>}
           key={idx}
           className="background-panel background-panel-border"
         >

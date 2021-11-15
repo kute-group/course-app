@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { get } from 'lodash';
+import { useSelector, useDispatch } from 'react-redux';
 import { Layout, Menu, Breadcrumb } from 'antd';
 import 'assets/styles/style.css';
 import AppHeader from 'components/parts/header/AppHeader';
@@ -12,6 +14,8 @@ import LearnStep from 'components/parts/learnstep/LearnStep';
 import Statisic from 'components/parts/statisic/Statisic';
 import Search from 'components/parts/search/Search';
 
+import { fetchCourses } from 'redux/courses/action';
+
 const { Header, Content, Footer } = Layout;
 
 // import internal libs
@@ -21,15 +25,17 @@ function Home() {
     <Layout className="main-app">
       <AppHeader />
       <Content className="app-content">
-        <BigSlider />
+        {/* <BigSlider /> */}
+        <br/>
+        <br/>
+        <br/>
         <ClassList />
-        <Search />
+        {/* <Search /> */}
         <CourseList />
-        <CourseList />
-        <LearnStep />
+        {/* <LearnStep />
         <Statisic />
         <ListOurTeam />
-        <ListNews />
+        <ListNews /> */}
       </Content>
       <AppFooter />
     </Layout>
